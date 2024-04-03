@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations";
+import { successAdd, successDelete } from "../../helpers/toast";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -31,6 +32,7 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
+        successAdd();
       })
       .addCase(addContact.rejected, handleRejected)
       .addCase(deleteContact.pending, handlePending)
@@ -41,6 +43,7 @@ const contactsSlice = createSlice({
           (contact) => contact.id === action.payload.id
         );
         state.items.splice(index, 1);
+        successDelete();
       })
       .addCase(deleteContact.rejected, handleRejected);
   },

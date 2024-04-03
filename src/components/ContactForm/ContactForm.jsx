@@ -1,7 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
+import { selectContacts } from "../../redux/contacts/selectors";
+import { nameCheckerError } from "../../helpers/toast";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 
@@ -29,9 +31,20 @@ export default function ContactForm() {
   const nameFieldId = useId();
   const numberFieldId = useId();
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values));
+    if (
+      contacts.some(
+        (contact) =>
+          contact.name === values.name && contact.number === values.number
+      )
+    ) {
+      nameCheckerError();
+    } else {
+      dispatch(addContact(values));
+    }
+
     actions.resetForm();
   };
   return (

@@ -8,6 +8,7 @@ import ContactList from "./ContactList/ContactList";
 import { selectError, selectIsLoading } from "../redux/contacts/selectors";
 import Loader from "./Loader/Loader";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function App() {
       {isLoading && !error && <Loader />}
       {error && <ErrorMessage message={error}></ErrorMessage>}
       {!isLoading && !error && <ContactList />}
+      <Toaster position="top-right"></Toaster>
     </div>
   );
 }
