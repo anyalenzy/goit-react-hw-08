@@ -1,0 +1,42 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #383737;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 168, 219, 0.7539390756302521) 6%,
+    rgba(51, 92, 142, 0.611379551820728) 73%,
+    rgba(249, 67, 253, 0.6755077030812324) 120%
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

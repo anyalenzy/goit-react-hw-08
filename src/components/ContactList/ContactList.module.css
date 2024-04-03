@@ -1,0 +1,13 @@
+.contactList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 24px;
+}
+.textInfo {
+  margin-top: 20px;
+  text-align: center;
+  color: #a39d9d;
+}

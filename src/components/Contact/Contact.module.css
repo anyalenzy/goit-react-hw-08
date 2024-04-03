@@ -1,0 +1,35 @@
+.contactItem {
+  border: 1px solid #161616;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+}
+.contactName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.contactNumber {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+.deleteBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.deleteBtn:hover {
+  opacity: 0.8;
+}
