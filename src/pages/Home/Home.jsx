@@ -1,24 +1,13 @@
-// import DocumentTitle from "../components/DocumentTitle";
+import DocumentTitle from "../components/DocumentTitle";
 
-// export default function Home() {
-//   return (
-//     <>
-//       <DocumentTitle>Home</DocumentTitle>
+export default function Home() {
+  return (
+    <>
+      <DocumentTitle>Home</DocumentTitle>
 
-//       <div style={styles.container}>
-//         <h1 style={styles.title}>
-//           Task manager welcome page{" "}
-//           <span role="img" aria-label="Greeting icon">
-//             💁‍♀️
-//           </span>
-//         </h1>
-//       </div>
-//     </>
-//   );
-// }
-
-const Home = () => {
-  return <div>Home</div>;
-};
-
-export default Home;
+      <div>
+        <h1>Task manager welcome page </h1>
+      </div>
+    </>
+  );
+}

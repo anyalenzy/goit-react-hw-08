@@ -1,5 +1,9 @@
-const DocumentTitle = () => {
-  return <div>DocumentTitle</div>;
-};
+import { Helmet } from "react-helmet-async";
 
-export default DocumentTitle;
+export default function DocumentTitle({ children }) {
+  return (
+    <Helmet>
+      <title>{children}</title>
+    </Helmet>
+  );
+}
