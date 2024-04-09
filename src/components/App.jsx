@@ -58,7 +58,7 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-      <Toaster />
+      {/* <Toaster /> */}
     </>
   );
 };
