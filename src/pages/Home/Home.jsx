@@ -6,7 +6,7 @@ export default function Home() {
       <DocumentTitle>Home</DocumentTitle>
 
       <div>
-        <h1>Task manager welcome page </h1>
+        <h1>Phonebook welcome page </h1>
       </div>
     </>
   );
