@@ -1,6 +1,8 @@
 .contactsSection {
+  position: relative;
   display: flex;
   justify-content: space-around;
+  height: 95vh;
 }
 .flexRight {
   display: flex;

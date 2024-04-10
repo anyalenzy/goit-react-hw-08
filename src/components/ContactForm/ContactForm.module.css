@@ -32,7 +32,7 @@
 .formInput:hover,
 .formInput:focus,
 .formInput:active {
-  border: 1px solid #161616;
+  border: 1px solid #9e78f8;
 }
 .btnSubmit {
   background-color: #9e78f8;
@@ -46,7 +46,7 @@
   align-self: flex-start;
 }
 .btnSubmit:hover {
-  opacity: 0.8;
+  opacity: 80%;
 }
 .errorMessage {
   color: #dd3a3a;

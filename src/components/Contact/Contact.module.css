@@ -1,49 +1,61 @@
 .contactItem {
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 10px;
   display: flex;
   gap: 24px;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   min-width: 280px;
 }
+
 .contactContainer {
-  display: flex;
-  gap: 20px;
-}
-.contactIcon {
-  fill: #38005a;
-  font-size: 14px;
-}
-.contactIconPhone {
-  fill: #38005a;
-  font-size: 16px;
+  min-width: 150px;
+  flex-shrink: 0;
 }
 .contactName {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   line-height: 1;
+  margin-bottom: 10px;
+}
+.contactIcon {
+  fill: #38005a;
 }
 
 .contactNumber {
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+.editBtn {
+  background-color: #9e78f8;
   display: flex;
   align-items: center;
   gap: 5px;
-  line-height: 1;
-}
-.deleteBtn {
-  background-color: #9e78f8;
   color: #fff;
-  padding: 8px 20px;
-
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
   font-weight: bold;
 }
+.deleteBtn {
+  background-color: #48396d;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.editBtn:hover,
 .deleteBtn:hover {
-  opacity: 0.8;
+  opacity: 80%;
 }
