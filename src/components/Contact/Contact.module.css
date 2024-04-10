@@ -1,29 +1,43 @@
 .contactItem {
-  border: 1px solid #161616;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px 10px;
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  width: 280px;
+  min-width: 280px;
+}
+.contactContainer {
+  display: flex;
+  gap: 20px;
+}
+.contactIcon {
+  fill: #38005a;
+  font-size: 14px;
+}
+.contactIconPhone {
+  fill: #38005a;
+  font-size: 16px;
 }
 .contactName {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   line-height: 1;
-  margin-bottom: 10px;
 }
 
 .contactNumber {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   line-height: 1;
 }
 .deleteBtn {
-  padding: 8px 16px;
+  background-color: #9e78f8;
+  color: #fff;
+  padding: 8px 20px;
+
   border: none;
   border-radius: 5px;
   cursor: pointer;

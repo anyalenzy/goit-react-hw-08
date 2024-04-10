@@ -1,19 +1,24 @@
 .formContainer {
-  border: 1px solid #161616;
-  border-radius: 5px;
-  padding: 10px;
+  background: linear-gradient(
+    0deg,
+    rgb(120 199 223) 54%,
+    rgb(191 136 246) 120%,
+    rgba(249, 67, 253, 0.6755077030812324) 100%
+  );
+  border-radius: 10px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   align-items: center;
-  width: 280px;
+  min-width: 280px;
   margin-top: 20px;
   margin-bottom: 20px;
+  align-self: baseline;
 }
 .fieldContainer {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   width: 100%;
 }
 .formInput {
@@ -30,12 +35,15 @@
   border: 1px solid #161616;
 }
 .btnSubmit {
-  padding: 8px 16px;
+  background-color: #9e78f8;
+  color: #fff;
+  padding: 8px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
   font-weight: bold;
+  align-self: flex-start;
 }
 .btnSubmit:hover {
   opacity: 0.8;

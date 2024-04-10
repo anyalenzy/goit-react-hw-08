@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations";
 import css from "./Contact.module.css";
-import { FaUser } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlinePhone } from "react-icons/md";
 
 export default function Contact({ contact: { id, name, number } }) {
   const dispatch = useDispatch();
@@ -10,13 +10,13 @@ export default function Contact({ contact: { id, name, number } }) {
 
   return (
     <li className={css.contactItem}>
-      <div>
+      <div className={css.contactContainer}>
         <p className={css.contactName}>
-          <FaUser />
+          <FaRegUser className={css.contactIcon} />
           {name}
         </p>
         <p className={css.contactNumber}>
-          <FaPhoneAlt />
+          <MdOutlinePhone className={css.contactIconPhone} />
           {number}
         </p>
       </div>

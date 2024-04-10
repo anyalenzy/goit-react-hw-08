@@ -7,6 +7,7 @@ import ContactList from "../../components/ContactList/ContactList";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Loader from "../../components/Loader/Loader";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import css from "./Contacts.module.css";
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -19,10 +20,15 @@ export default function Contacts() {
   return (
     <>
       <DocumentTitle>Your contacts</DocumentTitle>
-      <ContactForm />
-      <SearchBox />
-      {isLoading && <Loader />}
-      <ContactList />
+      <section className={css.contactsSection}>
+        <ContactForm />
+        <div className={css.flexRight}>
+          <h2>Contacts</h2>
+          <SearchBox />
+          {isLoading && <Loader />}
+          <ContactList />
+        </div>
+      </section>
     </>
   );
 }

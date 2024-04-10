@@ -1,7 +1,15 @@
 .contactList {
+  background: linear-gradient(
+    0deg,
+    rgb(120 199 223) 54%,
+    rgb(191 136 246) 120%,
+    rgba(249, 67, 253, 0.6755077030812324) 100%
+  );
+  border-radius: 10px;
   list-style: none;
-  padding: 0;
+  padding: 10px 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 24px;
