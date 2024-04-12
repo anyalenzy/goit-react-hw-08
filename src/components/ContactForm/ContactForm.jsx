@@ -7,7 +7,7 @@ import { nameCheckerError } from "../../helpers/toast";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 
-const ContactSchema = Yup.object().shape({
+export const ContactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too Short!")
     .max(50, "Too Long!")

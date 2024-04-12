@@ -1,7 +1,7 @@
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
+import css from "./DialogDelete.module.css";
 
 const DialogDelete = ({ open, handleClose, handleDelete }) => {
   return (
@@ -12,13 +12,15 @@ const DialogDelete = ({ open, handleClose, handleDelete }) => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title">
-        {"Delete contact from phonebook?"}
+        {"Are you sure you want to delete the contact?"}
       </DialogTitle>
       <DialogActions>
-        <Button onClick={handleDelete}>Delete</Button>
-        <Button onClick={handleClose} autoFocus>
+        <button className={css.deleteBtn} onClick={handleDelete}>
+          Delete
+        </button>
+        <button className={css.cancelBtn} onClick={handleClose} autoFocus>
           Cancel
-        </Button>
+        </button>
       </DialogActions>
     </Dialog>
   );

@@ -1,9 +1,13 @@
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import * as Yup from "yup";
 import { logIn } from "../../redux/auth/operations";
 import css from "../ContactForm/ContactForm.module.css";
+import { PiEyeClosedBold } from "react-icons/pi";
+import { PiEyeBold } from "react-icons/pi";
+import style from "./LoginForm.module.css";
 
 const ContactSchema = Yup.object().shape({
   email: Yup.string()
@@ -20,20 +24,16 @@ const initialValues = {
 };
 
 export default function ContactForm() {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const handleTogglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
   const emailFieldId = useId();
   const passwordFieldId = useId();
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(logIn(initialValues))
-      .unwrap()
-      .then(() => {
-        console.log("login success");
-      })
-      .catch(() => {
-        console.log("login error");
-      });
-
+    dispatch(logIn(initialValues));
     actions.resetForm();
   };
   return (
@@ -62,10 +62,22 @@ export default function ContactForm() {
           <label htmlFor={passwordFieldId}>Password</label>
           <Field
             className={css.formInput}
-            type="password"
+            type={isPasswordVisible ? "text" : "password"}
             name="password"
             id={passwordFieldId}
           />
+          {isPasswordVisible ? (
+            <PiEyeBold
+              className={style.passwordIcon}
+              onClick={handleTogglePasswordVisibility}
+            />
+          ) : (
+            <PiEyeClosedBold
+              className={style.passwordIcon}
+              onClick={handleTogglePasswordVisibility}
+            />
+          )}
+
           <ErrorMessage
             className={css.errorMessage}
             name="password"

@@ -1,4 +1,6 @@
 .container {
+  position: relative;
+  height: 97vh;
   padding: 15px;
 }
 .notFoundTitle {

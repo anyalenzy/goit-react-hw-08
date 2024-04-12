@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import css from "./NotFoundPage.module.css";
 import BackLink from "../../components/BackLink/BackLink";
 import DocumentTitle from "../../components/DocumentTitle";
+import CircleBlock from "../../components/CircleBlock/CircleBlock";
 
 export default function NotFoundPage() {
   const location = useLocation();
@@ -17,6 +18,7 @@ export default function NotFoundPage() {
             ...maybe the page you're looking for is not found or never existed.
           </p>
           <BackLink to={backLink}>Back to home</BackLink>
+          <CircleBlock />
         </div>
       </section>
     </>

@@ -1,0 +1,9 @@
+.sectionRegistration {
+  height: 97vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.containerRegisterForm {
+  width: 400px;
+}

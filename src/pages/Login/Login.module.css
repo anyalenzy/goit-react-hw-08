@@ -1,0 +1,10 @@
+.sectionLogin {
+  padding: 30px;
+  height: 97vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.containerLoginForm {
+  width: 400px;
+}

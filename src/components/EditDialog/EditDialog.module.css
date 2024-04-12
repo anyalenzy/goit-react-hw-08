@@ -1,0 +1,40 @@
+form {
+  max-width: 400px;
+}
+.fieldContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.editBtn {
+  background-color: #48396d;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.cancelBtn {
+  background-color: #9e78f8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  opacity: 80%;
+}
