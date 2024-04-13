@@ -14,7 +14,6 @@
   min-width: 280px;
   margin-top: 20px;
   margin-bottom: 20px;
-  align-self: baseline;
 }
 .fieldContainer {
   position: relative;
@@ -51,4 +50,9 @@
 }
 .errorMessage {
   color: #dd3a3a;
+}
+@media screen and (min-width: 768px) {
+  .formContainer {
+    align-self: baseline;
+  }
 }

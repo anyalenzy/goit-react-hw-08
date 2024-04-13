@@ -1,7 +1,6 @@
 import { useEffect, lazy } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 import { Layout } from "./Layout";
 import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
@@ -16,6 +15,7 @@ const RegistrationPage = lazy(() =>
 const LoginPage = lazy(() => import("../pages/Login/Login"));
 const ContactPage = lazy(() => import("../pages/Contacts/Contacts"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
+
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();

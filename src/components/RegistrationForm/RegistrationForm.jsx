@@ -1,9 +1,13 @@
 import { useDispatch } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
+import { useState } from "react";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
 import css from "../ContactForm/ContactForm.module.css";
+import { PiEyeClosedBold } from "react-icons/pi";
+import { PiEyeBold } from "react-icons/pi";
+import style from "../LoginForm/LoginForm.module.css";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -29,6 +33,10 @@ export default function RegistrationForm() {
   const passwordFieldId = useId();
   const nameFieldId = useId();
   const dispatch = useDispatch();
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const handleTogglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
   const handleSubmit = (values, actions) => {
     dispatch(register(values));
@@ -74,10 +82,21 @@ export default function RegistrationForm() {
           <label htmlFor={passwordFieldId}>Password</label>
           <Field
             className={css.formInput}
-            type="password"
+            type={isPasswordVisible ? "text" : "password"}
             name="password"
             id={passwordFieldId}
           />
+          {isPasswordVisible ? (
+            <PiEyeBold
+              className={style.passwordIcon}
+              onClick={handleTogglePasswordVisibility}
+            />
+          ) : (
+            <PiEyeClosedBold
+              className={style.passwordIcon}
+              onClick={handleTogglePasswordVisibility}
+            />
+          )}
           <ErrorMessage
             className={css.errorMessage}
             name="password"

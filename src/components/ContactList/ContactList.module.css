@@ -7,7 +7,6 @@
   );
   border-radius: 10px;
   list-style: none;
-  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -18,4 +17,9 @@
   margin-top: 20px;
   text-align: center;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .contactList {
+    padding: 10px 20px;
+  }
 }

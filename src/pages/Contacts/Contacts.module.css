@@ -1,7 +1,7 @@
 .contactsSection {
-  position: relative;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   height: 97vh;
 }
 .flexRight {
@@ -9,6 +9,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  align-self: baseline;
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .contactsSection {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 97vh;
+  }
+  .flexRight {
+    align-self: baseline;
+  }
 }

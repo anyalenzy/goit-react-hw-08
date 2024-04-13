@@ -19,6 +19,7 @@
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .contactIcon {
   fill: #38005a;
 }
@@ -28,6 +29,11 @@
   align-items: center;
   gap: 8px;
   line-height: 1;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .editBtn {
   background-color: #9e78f8;
@@ -58,4 +64,11 @@
 .editBtn:hover,
 .deleteBtn:hover {
   opacity: 80%;
+}
+@media screen and (min-width: 768px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }

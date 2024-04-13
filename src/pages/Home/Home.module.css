@@ -1,20 +1,20 @@
 .sectionHome {
-  padding-top: 50px;
+  padding-top: 20px;
   height: 97vh;
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .homeTitle {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 10px;
   -webkit-animation: homeTitle 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: homeTitle 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .homeSubTitle {
-  font-size: 20px;
+  font-size: 18px;
   -webkit-animation: homeSubTitle 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: homeSubTitle 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -66,5 +66,20 @@
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sectionHome {
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .homeTitle {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .homeSubTitle {
+    font-size: 20px;
   }
 }

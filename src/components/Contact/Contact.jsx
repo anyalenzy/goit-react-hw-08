@@ -45,14 +45,16 @@ export default function Contact({ contact: { id, name, number } }) {
           {number}
         </p>
       </div>
-      <button className={css.editBtn} onClick={handleClickOpenEditDialog}>
-        <BiEdit />
-        Edit
-      </button>
-      <button className={css.deleteBtn} onClick={handleClickOpenDialog}>
-        <RiDeleteBin6Line />
-        Delete
-      </button>
+      <div className={css.buttonContainer}>
+        <button className={css.editBtn} onClick={handleClickOpenEditDialog}>
+          <BiEdit />
+          Edit
+        </button>
+        <button className={css.deleteBtn} onClick={handleClickOpenDialog}>
+          <RiDeleteBin6Line />
+          Delete
+        </button>
+      </div>
       <DialogDelete
         open={open}
         id={id}

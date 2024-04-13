@@ -1,6 +1,7 @@
 .authNavContainer {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .link {
   font-weight: 700;

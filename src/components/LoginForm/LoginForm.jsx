@@ -8,6 +8,7 @@ import css from "../ContactForm/ContactForm.module.css";
 import { PiEyeClosedBold } from "react-icons/pi";
 import { PiEyeBold } from "react-icons/pi";
 import style from "./LoginForm.module.css";
+import { successToast, errorToast } from "../../helpers/toast";
 
 const ContactSchema = Yup.object().shape({
   email: Yup.string()
@@ -33,9 +34,17 @@ export default function ContactForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(logIn(initialValues));
+    dispatch(logIn(values))
+      .unwrap()
+      .then(() => {
+        successToast("login success");
+      })
+      .catch((err) => {
+        errorToast("login error");
+      });
     actions.resetForm();
   };
+
   return (
     <Formik
       initialValues={initialValues}
