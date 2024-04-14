@@ -5,6 +5,7 @@ import {
   deleteContact,
   updateContact,
 } from "./operations";
+import { logOut } from "../auth/operations";
 import { successAdd, successDelete, successEdit } from "../../helpers/toast";
 
 const handlePending = (state) => {
@@ -61,7 +62,12 @@ const contactsSlice = createSlice({
         state.items[index] = action.payload;
         successEdit();
       })
-      .addCase(updateContact.rejected, handleRejected);
+      .addCase(updateContact.rejected, handleRejected)
+      .addCase(logOut.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      });
   },
 });
 

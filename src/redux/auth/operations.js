@@ -22,13 +22,12 @@ export const register = createAsyncThunk(
     try {
       const { data } = await axios.post("/users/signup", credentials);
       setAuthHeader(data.token);
-      console.log(data);
       return data;
     } catch (error) {
-      errorToast(error.message);
-      return thunkAPI.rejectWithValue(
+      errorToast(
         "Sorry, something went wrong during registration. Please try again or contact support"
       );
+      return thunkAPI.rejectWithValue();
     }
   }
 );
@@ -45,10 +44,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(data.token);
       return data;
     } catch (error) {
-      errorToast(error.message);
-      return thunkAPI.rejectWithValue(
-        "Authorization error. Check your details and try again"
-      );
+      return thunkAPI.rejectWithValue();
     }
   }
 );
@@ -89,7 +85,6 @@ export const refreshUser = createAsyncThunk(
       const { data } = await axios.get("/users/current");
       return data;
     } catch (error) {
-      errorToast(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

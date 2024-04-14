@@ -24,7 +24,7 @@ const initialValues = {
   password: "",
 };
 
-export default function ContactForm() {
+export default function LoginForm() {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const handleTogglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
